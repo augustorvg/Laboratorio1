@@ -110,10 +110,10 @@ INICIO:
 	
 ALTAP:	    ;;;;;;;;;INTERRUPCION PRIORIDAD ALTA;;;;;;;;;
 	CALL	Guardar_Registros
-	BTFSC	INTCON, INT0IF	    ;Pregunta por la bandera de alta prioridad ¿Está apaga la bandera INT0IF?
+	BTFSC	INTCON, INT0IF	    ;Pregunta por la bandera de alta prioridad Â¿EstÃ¡ apaga la bandera INT0IF?
 	GOTO	RUN1
 	GOTO	SALIR_A
-	;Ejemplo de como se preguntaría por varias interrupciones (obviamente de alta en este caso, funciona igual en baja)
+	;Ejemplo de como se preguntarÃ­a por varias interrupciones (obviamente de alta en este caso, funciona igual en baja)
 ;	BTFSC	INTCON, TMROIF
 ;	GOTO TIMER
 ;	GOTO SALIR_A	    ;SALIR_ALTA
@@ -131,7 +131,7 @@ SALIR_A:
 
 BAJAP:	;;;;;;;;;;INTERRUPCION PRIORIDAD BAJA;;;;;;;;;;
 	CALL	Guardar_Registros
-	BTFSC	INTCON3, INT1IF	    ;Pregunta por la bandera de alta prioridad ¿Está apaga la bandera INT0IF?
+	BTFSC	INTCON3, INT1IF	    ;Pregunta por la bandera de alta prioridad Â¿EstÃ¡ apaga la bandera INT0IF?
 	GOTO	RUNB1
 	GOTO	SALIR_B
 	
